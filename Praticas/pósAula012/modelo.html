@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu cantor</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Seu cantor</h1>
+    </header>
+    <section>
+        <div>
+            <p>Qual vertente do Rap você mais gosta:</p>
+
+            <input type="radio" name="estilo" id="classico" checked>
+            <label for="boombap">Classico</label>
+            <input type="radio" name="estilo" id="trap">
+            <label for="trap">Trap</label>
+            <input type="radio" name="estilo" id="plug">
+            <label for="plug">Plug</label>
+            <input type="radio" name="estilo" id="freestyle">
+            <label for="freestyle">freestyle</label>
+
+            <p>Você prefere cantores:</p>
+
+            <input type="radio" name="nasc" id="br" checked>
+            <label for="br">Brasileiro</label>
+            <input type="radio" name="nasc" id="gringo">
+            <label for="gringo">Estrangeiro</label>
+
+            <input id="botao" type="button" value="Pronto" onclick="recomendar()">
+            
+        </div>
+        <div id="res">
+            <p>Iremos te recomendar um cantor...</p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; arthur_2k03</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

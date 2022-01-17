@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data de nascimento</title>
+    <style>
+        h1{
+            font-size: 27px;
+        }
+        p{
+            font-size: 21px;
+            font-family: arial;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var nome = window.prompt ('Digite seu nome:')
+        var data_nasc = Number(window.prompt ('Digite o ano que voçê nasceu:'))
+        var data_atual = Number(window.prompt (`${nome.toUpperCase()} digite o ano que estamos:`))
+        var data_consulta = Number(window.prompt('Qual ano voçê consultar?'))
+        var idade_atual = data_atual - data_nasc
+        var idade_futura = data_consulta - data_nasc
+          document.write(`<h1>Olá, <strong>${nome.toUpperCase()}</strong>! Bem-vindo ao meu site.</h1>`)
+          document.write(`<p>Você nasceu em ${data_nasc}, portanto voçê tem <strong>${idade_atual} anos!</strong></br>`)
+          document.write(`E em ${data_consulta}, voçê terá <strong>${idade_futura} anos!</strong></p>`)
+    </script>
+</body>
+</html>

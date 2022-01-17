@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            font: normal 20px arial;
+            background-color: rgb(220, 205, 255);
+            color: rgb(66, 3, 110);
+        }
+        div.container{
+            text-align: center;
+        }
+        input{
+            font: normal 18px arial;
+            width: 120px;
+        }
+        input#botao{
+            background-color: rgb(66, 3, 110);
+            color: white;
+        }
+        p{
+            margin-top: -20px;
+        }
+        div#res{
+            font: normal 21px arial;
+            margin-top: 20px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <h1>Sua nacionalidade</h1>
+        <p>Seja bem-vindo!</p>
+        Digite o seu país de nascimento:
+        <input type="text" name="país" id="país">
+        <input type="button" value="Confirmar" id="botao" onclick="pesquisar()" onmouseenter="entrar()" onmouseout="sair()">
+        <div id="res">resultado</div>
+    </div>
+
+    <script>
+
+        function entrar() {
+            var botao = window.document.getElementById('botao')
+            botao.style.background = 'black'
+        }
+        function sair() {
+            var botao = window.document.getElementById('botao')
+            botao.style.backgroundColor = 'rgb(66, 3, 110)'
+        }
+        function pesquisar() {
+            var país = window.document.getElementById('país').value.toLowerCase()
+            var res = window.document.getElementById('res')
+            if (país == 'brasil') {
+                res.innerHTML = `Você nasceu no <strong>Brasil</strong>, por tanto você é <Strong>brasileiro</strong>!`
+            } else {
+                res.innerHTML = `Você nasceu no <strong>${país}</strong>, por tanto você é <strong>estrangeiro</strong>!`
+            }
+        }
+        
+    </script>
+
+</body>
+</html>

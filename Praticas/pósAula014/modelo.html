@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cauculadora</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Tabuada</h1>
+    </header>
+    <section>
+        <div>
+            
+            Qual operação você deseja ver a taboada:
+            <p>
+            <input type="radio" name="opertxt" id="adiç" checked>
+            <label for="oper">Adição</label>
+            <input type="radio" name="opertxt" id="subt">
+            <label for="oper">Subtração</label>
+            <input type="radio" name="opertxt" id="mult">
+            <label for="oper">Multiplicação</label>
+            <input type="radio" name="opertxt" id="divi">
+            <label for="oper">Divisão</label>
+            </p>
+
+            <p>Numero da tabuada: <input type="number" name="numtxt" id="numtxt">
+            <input type="button" value="Gerar Tabuada" onclick="gerartabuada()"></p>
+
+        </div>
+        <div>
+
+            <select name="tabuada" id="tabuada" size="10">
+                <option> Digite um numero acima... </option>
+            </select>
+            
+        </div>
+    </section>
+    <footer>
+        <p>&copy; CursoemVideo</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

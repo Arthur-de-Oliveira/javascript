@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média</title>
+    <style>
+        h2{
+            font-size: 40px;
+            font-family: 'Franklin Gothic Medium';
+        }
+        p{
+            font-size: 23px;
+            font-family: arial;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var nome = window.prompt ('Olá, Qual seu nome?')
+        var meta = Number(window.prompt(`${nome}, Qual média voçê precisa para passar de ano?`))
+        var n1 = Number(window.prompt('Qual sua media do 1º bimestre (N1)?'))
+        var n2 = Number(window.prompt('Qual sua media do 2º bimestre (N2)?'))
+        var n3 = Number(window.prompt('Qual sua media do 3º bimestre (N3)?'))
+        var n4 = Number(window.prompt('Qual sua media do 4º bimestre (N4)?'))
+        var media = (n1 + n2 + n3 + n4) / 4
+        var aprov = media >= meta ? 'APROVADO(A), parabéns!' : 'REPROVADO(A), boa recuperação!'
+        document.write ('<h2>Sua média :)</h2>')
+        document.write (`<p>Olá, ${nome}!</br>`)
+        document.write (`Sua media é ${media.toFixed(2)}</br>`)
+        document.write (`Voçê foi ${aprov}</p>`)
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            text-align: center;
+        }
+        h1{
+            color: greenyellow;
+        }
+        body{
+            font: normal 25px arial;
+            background-color: rgb(27, 26, 26);
+            color: rgb(212, 193, 193);
+            margin-left: 25px;
+        }
+        p{
+            font: normal 18px arial;
+            margin-top: -25px;
+            margin-bottom: 35px;
+        }
+        input{
+            width: 100px;
+            font: normal 20px arial;
+        }
+        div#result{
+            margin-top: 25px;
+        }
+        input#botao{
+            background-color: rgb(211, 201, 201);
+            margin-left: 18px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora</h1>
+        <p>Bem-vindo!</p>
+        <input type="number" name="txtn1" id="txtn1"> <strong>+</strong>
+        <input type="number" name="txtn2" id="txtn2">   
+        <input type="button" value="Somar" id="botao" onclick="somar()" onmouseenter="entrar()" onmouseout="sair()">
+        <div id="result">Resultado</div>
+    </div>
+
+    <script>
+        function entrar(){
+            var botao = window.document.getElementById('botao')
+            botao.style.backgroundColor = 'yellowgreen'
+        }
+        function sair(){
+            var botao = window.document.getElementById('botao')
+            botao.style.backgroundColor = 'rgb(211, 201, 201)'
+        }
+        function somar(){
+
+            var num1 = window.document.getElementById('txtn1')
+            var num2 = window.document.getElementById('txtn2')
+            var result = window.document.getElementById('result')
+            var n1 = Number(num1.value)
+            var n2 = Number(num2.value)
+            var r = n1 + n2
+            result.innerHTML = `A soma entre ${n1} e ${n2} é igual a ${r}`
+        }
+    </script>
+</body>
+</html>
